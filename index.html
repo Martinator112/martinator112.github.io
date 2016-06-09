@@ -5,10 +5,18 @@
 <body>
   <h2>ZOOBrno Application - Architecture Documentation</h2>
   <div class="link_box">
+    <ul>
+      <li>
+        <a href="#technology_used">Technology overview</a>
+      </li>
+      <li>
+        <a href="#design_description">Architecture design</a>
+      </li>
+      <li>
+        <a href="#platfom_support">Supported platforms</a>
+      </li>
+    </ul>
 
-    <a href="#technology_used">Technology overview</a>
-    <a href="#design_description">Architecture design</a>
-    <a href="#platfom_support">Supported platforms</a>
   </div>
 
   <div id="#technology_used">
@@ -29,9 +37,15 @@
     <h3>Architecture design</h3>
     <p>
       We are using www folder of app to store our text in form of JSON and audio files in form of mp3.
+      <br />
       Every animal has assigned QR code and animal view is accessible through successfuly reading QR code.
+      <br/>
+
       We provide news for ZOO in Brno by rendering iframe with source attribute pointing to their website.
+      <br />
       Rating of our animals will be done through simple PUT request on our web server.
+
+      <br />
     </p>
   </div>
 
