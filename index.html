@@ -1,1 +1,45 @@
-Initial version
+<html >
+<head>
+
+</head>
+<body>
+  <h2>ZOOBrno Application - Architecture Documentation</h2>
+  <div class="link_box">
+
+    <a href="#technology_used">Technology overview</a>
+    <a href="#design_description">Architecture design</a>
+    <a href="#platfom_support">Supported platforms</a>
+  </div>
+
+  <div id="#technology_used">
+    <h3>Technology used</h3>
+    <p>
+      For our mobile application we are using <i>Ionic framework</i>. It is a HTML5 SDK(software development kit) built
+      on top of Apache Cordova and AngularJS. It allows us to easily create hybrid mobile app and
+      provides fast development time.
+      It includes working with html, css and sass.
+      For more information about this framework see <a href="http://ionicframework.com">here</a>.
+    </p>
+    <p>
+      For our web application for gathering rating info we are using GoLang.
+    </p>
+  </div>
+
+  <div id="#design_desciprtion">
+    <h3>Architecture design</h3>
+    <p>
+      We are using www folder of app to store our text in form of JSON and audio files in form of mp3.
+      Every animal has assigned QR code and animal view is accessible through successfuly reading QR code.
+      We provide news for ZOO in Brno by rendering iframe with source attribute pointing to their website.
+      Rating of our animals will be done through simple PUT request on our web server.
+    </p>
+  </div>
+
+  <div id="#design_description">
+    <h3>Platforms supported</h3>
+    <p>
+      Our aim is to support fully IOS and Android devices.
+    </p>
+  </div>
+</body>
+</html>
