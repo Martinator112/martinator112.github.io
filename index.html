@@ -1,28 +1,29 @@
 <html >
 <head>
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css" type="text/css"  />
 </head>
 <body>
-  <h2>ZOOBrno Application - Architecture Documentation</h2>
+  <h2 id="document-heading">ZOOBrno Application - Architecture Documentation</h2>
   <div class="link_box">
-    <ul>
-      <lh>Table of content</lh>
-      <li>
+    <ul class="list-group">
+      <li class="list-group-item-heading text-center">Table of content</li>
+      <li class="list-group-item text-center">
         <a href="#technology_used">Technology overview</a>
       </li>
-      <li>
+      <li class="list-group-item text-center">
         <a href="#design_description">Architecture design</a>
       </li>
-      <li>
-        <a href="#platfom_support">Supported platforms</a>
+      <li class="list-group-item text-center">
+        <a href="#platform_support">Supported platforms</a>
       </li>
     </ul>
 
   </div>
 
-  <div id="technology_used">
+  <div id="technology_used" class="well">
     <h3>Technology used</h3>
-    <p>
+    <p class="text-info">
       For our mobile application we are using <i>Ionic framework</i>. It is a HTML5 SDK(software development kit) built
       on top of Apache Cordova and AngularJS. It allows us to easily create hybrid mobile app and
       provides fast development time.
@@ -30,30 +31,51 @@
       For more information about this framework see <a href="http://ionicframework.com">here</a>.
     </p>
     <p>
-      For our web application for gathering rating info we are using GoLang.
+      We also use <i>gulp</i> as our javascript task automation tool for number of reasons, it allows us:
+      <ul>
+        <li>
+          to further decrease development time and increase
+          productivity of developers
+        </li>
+        <li>
+          to split javacript code in multiple files without polluting global namespace
+        </li>
+        <li>
+          to automate any tasks that we need
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      We host our web application on openshift platform.
+    </p>
+    <p>
+      For our web application for gathering rating info we are using GoLang. For more information
+      about this modern compiled language see <a href="https://golang.org/doc/">here</a>.
     </p>
   </div>
 
-  <div id="design_desciprtion">
+  <div id="design_description"  class="well">
     <h3>Architecture design</h3>
     <p>
       We are using www folder of app to store our text in form of JSON and audio files in form of mp3.
       <br />
+
       Every animal has assigned QR code and animal view is accessible through successfuly reading QR code.
       <br/>
 
       We provide news for ZOO in Brno by rendering iframe with source attribute pointing to their website.
       <br />
-      Rating of our animals will be done through simple PUT request on our web server.
+      Rating of our animals will be done through simple PUT request sent to our web server.
 
       <br />
     </p>
   </div>
 
-  <div id="design_description">
+  <div id="platform_support"  class="well">
     <h3>Platforms supported</h3>
     <p>
-      Our aim is to support fully IOS and Android devices.
+      Our aim is to support fully iOS and Android devices.
     </p>
   </div>
 </body>
